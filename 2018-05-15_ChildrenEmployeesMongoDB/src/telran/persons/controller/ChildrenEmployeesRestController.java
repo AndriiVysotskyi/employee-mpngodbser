@@ -20,11 +20,6 @@ public class ChildrenEmployeesRestController {
 	@Autowired
 	IPersons persons;
 
-	@PostMapping(value = PersonsApiConstants.ADD_PERSON)
-	boolean addPerson(@RequestBody Person person) {
-		return persons.addPerson(person);
-	}
-
 	@PostMapping(value = PersonsApiConstants.ADD_CHILD)
 	boolean addChild(@RequestBody Child person) {
 		return persons.addPerson(person);
